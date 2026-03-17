@@ -4,5 +4,5 @@ int main()
 {
 	std::cout << "Hello, Bitches!" << std::endl;
 
-	return 0;
+	return 0; //kma
 }
