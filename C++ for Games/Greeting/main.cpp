@@ -22,8 +22,22 @@ int main()
 
 	}
 	
-	std::cout << "Hello, " << name;
-	std::cout << ". You are " << age << " years old." << std::endl;
+	if (age < 25)
+	{
+		std::cout << "Hello " << name;
+		std::cout << ", you are only " << age << " years old." << std::endl;
+	}
+	if (25 < age && age < 50)
+	{
+		std::cout << "Hello " << name;
+		std::cout << ", you are already " << age << " years old." << std::endl;
+	}
+	if (50 < age)
+	{
+		std::cout << "Hello " << name;
+		std::cout << ". You are very wise for your age." << std::endl;
+	}
+
 
 	std::cout << "Press enter to continue..." << std::endl;
 	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
