@@ -1,6 +1,12 @@
 #include <fstream>
 #include <iostream>
 
+struct highscore
+{
+	char name[4];
+	uint32_t score;
+};
+
 int main()
 {
 	// Write ascii files
@@ -44,6 +50,48 @@ int main()
 		}
 
 		highscores.close();
+	}
+	{
+		std::ifstream highscores("highscores.txt");
+		if (!highscores)
+		{
+			std::cerr << "ERROR: Failed to open file." << std::endl;
+			return 1;
+		}
+
+		char name[4];
+		int score;
+		while (highscores >> name >> score)
+		{
+			std::cout << name << " " << score << std::endl;
+		}
+
+		if (highscores.bad())
+		{
+			std::cerr << "ERROR: Reding the file." << std::endl;
+			return 1;
+		}
+
+		highscores.close();
+		//file will be closed when it goes out of scope.
+	}
+
+	//writing binary files.
+	{
+		std::ofstream highscores("highscores.bin", std::ios::binary);
+		if (!highscores)
+		{
+			std::cerr << "ERROR: Failed to open file." << std::endl;
+			return 1;
+		}
+
+		highscore scores[] = {
+			{"DAN", 2014},
+			{"TOM", 2012},
+			{"LUC", 2009},
+			{"SUZ", 1978},
+			{"JEF", 1977},
+		};
 	}
 	return 0;
 }
