@@ -1,7 +1,7 @@
 #include <fstream>
 #include <iostream>
 
-int()
+int main()
 {
 	// Write ascii files
 	{
@@ -20,7 +20,30 @@ int()
 		if (highscores.bad())
 		{
 			std::cerr << "ERROR: An error occured while writing to the file." << std::endl;
+			return 1;
 		}
+
+		highscores.close();
+		//file will close when it goes out of scope.
+	}
+
+	{
+		std::ofstream highscores("highscores.txt", std::ios::app);
+		if (!highscores)
+		{
+			std::cerr << "ERROR: The file failed to open." << std::endl;
+			return 1;
+		}
+
+		highscores << "JEF " << 1977 << std::endl;
+
+		if (highscores.bad())
+		{
+			std::cerr << "ERROR: Failed to write to file." << std::endl;
+			return 1;
+		}
+
+		highscores.close();
 	}
 	return 0;
 }
