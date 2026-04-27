@@ -15,6 +15,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "File IO", "File IO\File IO.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Integrals", "Integrals\Integrals.vcxproj", "{40EAB17F-9F55-443A-8CF9-3265ABF73C8A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Enums", "Enums\Enums.vcxproj", "{46EC08DC-C581-4DE8-BF71-55F8F4E05A5A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -71,6 +73,14 @@ Global
 		{40EAB17F-9F55-443A-8CF9-3265ABF73C8A}.Release|x64.Build.0 = Release|x64
 		{40EAB17F-9F55-443A-8CF9-3265ABF73C8A}.Release|x86.ActiveCfg = Release|Win32
 		{40EAB17F-9F55-443A-8CF9-3265ABF73C8A}.Release|x86.Build.0 = Release|Win32
+		{46EC08DC-C581-4DE8-BF71-55F8F4E05A5A}.Debug|x64.ActiveCfg = Debug|x64
+		{46EC08DC-C581-4DE8-BF71-55F8F4E05A5A}.Debug|x64.Build.0 = Debug|x64
+		{46EC08DC-C581-4DE8-BF71-55F8F4E05A5A}.Debug|x86.ActiveCfg = Debug|Win32
+		{46EC08DC-C581-4DE8-BF71-55F8F4E05A5A}.Debug|x86.Build.0 = Debug|Win32
+		{46EC08DC-C581-4DE8-BF71-55F8F4E05A5A}.Release|x64.ActiveCfg = Release|x64
+		{46EC08DC-C581-4DE8-BF71-55F8F4E05A5A}.Release|x64.Build.0 = Release|x64
+		{46EC08DC-C581-4DE8-BF71-55F8F4E05A5A}.Release|x86.ActiveCfg = Release|Win32
+		{46EC08DC-C581-4DE8-BF71-55F8F4E05A5A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
