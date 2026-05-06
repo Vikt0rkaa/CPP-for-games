@@ -5,7 +5,13 @@ int main()
 	int i = 3;
 	const char* name = "Viktoria";
 
-	int* pi = &i;
+	int* pi = nullptr; // &i;
+	pi = &i;
+
+	if (pi != nullptr)
+	{
+		*pi = 3;
+	}
 
 	std::cout << "Address of i: " << pi << std::endl;
 	std::cout << "Value of i: " << *pi << std::endl;
@@ -24,8 +30,25 @@ int main()
 	const char* const lastName = "Kratka";
 	// lastName = name; cant do this cuz the point where the pointer is pointing (xd what is that sentence) cannot be modified 
 
-	const int values[] = {1, 2, 3, 4};
+	const unsigned char values[] = {1, 2, 3, 4};
 	std::cout << *(values + 1) << std::endl;
+
+	int* arr = new int[100];
+	
+	//*(arr + 0) = 0; same as the arr[0] = 0; but that one is more readable
+	arr[0] = 0;
+	arr[99] = 99;
+	//*(arr + 99) = 99; 
+
+	delete[] arr;
+
+	int& ri = i;
+
+	ri = i; //this will only set the value of i.
+
+	ri = 5;
+
+	std::cout << "Value of i: " << i << std::endl;
 
 	return 0;
 }
