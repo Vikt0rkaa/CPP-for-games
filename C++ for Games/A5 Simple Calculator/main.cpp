@@ -20,12 +20,12 @@ int main()
 	}
 
 	//operator
-	std::cout << "Enter an operator (+,-,*,/): " << std::endl;
+	std::cout << "Enter an operator (+,-,*,/, %, ^): " << std::endl;
 	std::cin >> op;
 
-	while(op != '+' && op != '-' && op != '*' && op != '/')
+	while(op != '+' && op != '-' && op != '*' && op != '/' && op != '%' && op != '^')
 	{
-		std::cerr << "ERROR: Please enter a valid operator (+,-,*,/)." << std::endl;
+		std::cerr << "ERROR: Please enter a valid operator (+,-,*,/, %, ^)." << std::endl;
 		std::cin.clear();
 		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		std::cin >> op;
@@ -67,6 +67,19 @@ int main()
 	else if (op == '/')
 	{
 		solution = num1 / num2;
+	}
+	else if (op == '%')
+	{
+		if (static_cast<int>(num2) == 0)
+		{
+			std::cerr << "ERROR: Cannot modulo by zero." << std::endl;
+			return 1;
+		}
+		solution = static_cast<int>(num1) % static_cast<int>(num2);
+	}
+	else if (op == '^')
+	{
+		solution = pow(num1, num2);
 	}
 
 	//display the result
