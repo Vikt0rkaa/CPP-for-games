@@ -39,6 +39,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "A6 Swap", "A6 Swap\A6 Swap.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "A7 Dynamic Array", "A7 Dynamic Array\A7 Dynamic Array.vcxproj", "{9644D57A-1F23-485D-BB7E-B2AB24125072}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Shared Pointers", "Shared Pointers\Shared Pointers.vcxproj", "{1CDE9D48-0D00-468B-B2CF-4AA933A2C7FF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -191,6 +193,14 @@ Global
 		{9644D57A-1F23-485D-BB7E-B2AB24125072}.Release|x64.Build.0 = Release|x64
 		{9644D57A-1F23-485D-BB7E-B2AB24125072}.Release|x86.ActiveCfg = Release|Win32
 		{9644D57A-1F23-485D-BB7E-B2AB24125072}.Release|x86.Build.0 = Release|Win32
+		{1CDE9D48-0D00-468B-B2CF-4AA933A2C7FF}.Debug|x64.ActiveCfg = Debug|x64
+		{1CDE9D48-0D00-468B-B2CF-4AA933A2C7FF}.Debug|x64.Build.0 = Debug|x64
+		{1CDE9D48-0D00-468B-B2CF-4AA933A2C7FF}.Debug|x86.ActiveCfg = Debug|Win32
+		{1CDE9D48-0D00-468B-B2CF-4AA933A2C7FF}.Debug|x86.Build.0 = Debug|Win32
+		{1CDE9D48-0D00-468B-B2CF-4AA933A2C7FF}.Release|x64.ActiveCfg = Release|x64
+		{1CDE9D48-0D00-468B-B2CF-4AA933A2C7FF}.Release|x64.Build.0 = Release|x64
+		{1CDE9D48-0D00-468B-B2CF-4AA933A2C7FF}.Release|x86.ActiveCfg = Release|Win32
+		{1CDE9D48-0D00-468B-B2CF-4AA933A2C7FF}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
