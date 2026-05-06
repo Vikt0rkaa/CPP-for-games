@@ -1,3 +1,5 @@
+#include "Window.hpp"
+
 #include <iostream>
 #include <memory>
 
@@ -71,25 +73,41 @@ std::shared_ptr<Widget> make_widget(int data = 0)
 
 int main()
 {
-	std::weak_ptr<Widget> wPtr;
-	std::shared_ptr<Widget> sPtr;
-	{
-		auto widget = make_widget(1);
-		//auto widget = std::make_shared<Widget>(1);
-		sPtr = widget; 
+	//std::weak_ptr<Widget> wPtr;
+	//std::shared_ptr<Widget> sPtr;
+	//{
+	//	auto widget = make_widget(1);
+	//	//auto widget = std::make_shared<Widget>(1);
+	//	sPtr = widget; 
 
-		std::cout << "Use count: " << widget.use_count() << std::endl;
+	//	std::cout << "Use count: " << widget.use_count() << std::endl;
 
-		wPtr = widget; // weak pointers wont increment the use count.
+	//	wPtr = widget; // weak pointers wont increment the use count.
 
-		std::cout << "Use count: " << widget.use_count() << std::endl;
-	}
+	//	std::cout << "Use count: " << widget.use_count() << std::endl;
+	//}
 
-	if (auto widget = wPtr.lock())
-	{
-		//then we can use it
-		widget->doSomething();
-	}
+	//if (auto widget = wPtr.lock())
+	//{
+	//	//then we can use it
+	//	widget->doSomething();
+	//}
+
+	////std::unique_ptr<Widget> uPtr = std::unique_ptr<Widget>(new Widget(2));
+	//{
+	//	//RAII
+	//	std::unique_ptr<Widget> widget = std::make_unique<Widget>(2);
+
+	//	//Something happens..
+	//	//throw std::exception();
+	//}
+	//auto uPtr = std::make_unique<Widget>(2);
+
+	////auto uPtr2 = uPtr; //NOT ALLOWED.
+	////auto uPtr2 = std::move(uPtr); //this would work but usually we dont use this
+
+	Window win;
+	win.showWindow();
 
 	return 0;
 }
